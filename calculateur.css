@@ -1,0 +1,609 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f3f6fb;
+}
+
+.hero-calculateur{
+    background:linear-gradient(rgba(2,21,47,.75),rgba(2,21,47,.75)),
+    url("voiture route mouille.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero-calculateur h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero-calculateur p{
+    max-width:900px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.7;
+}
+
+.section{
+    max-width:1200px;
+    margin:70px auto;
+    padding:0 20px;
+}
+
+.titre{
+    text-align:center;
+    color:#02152f;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.intro{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto;
+    font-size:19px;
+    line-height:1.8;
+}
+
+.benefices{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.carte{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.carte h3{
+    color:#02152f;
+    margin-bottom:15px;
+}
+
+.carte p{
+    line-height:1.7;
+}
+
+.container{
+    width:95%;
+    max-width:1600px;
+    margin:auto;
+    padding:20px;
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:#02152f;
+    color:white;
+    display:none;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    height:120px;
+    border-radius:25px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    width: 98%;
+    margin-left: -1%;
+}
+
+.topbar-left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width:500px;
+    height:auto;
+}
+
+.topbar-center{
+    text-align:center;
+}
+
+.topbar-center h1{
+    color: #0b2d57;
+    font-size:3rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.topbar-center p{
+    margin-top:10px;
+    font-size: 16px;
+    color:#bfc7d5;
+}
+
+.topbar-right{
+    color:#7AC943;
+    font-size:18px;
+}
+
+/* LAYOUT */
+
+.main-layout{
+    display:grid;
+    grid-template-columns:380px 1fr 320px;
+    gap:25px;
+    align-items:start;
+    }
+
+/* BLOCS */
+
+.sidebar{
+    width:380px;
+}
+
+.content-bordered-column{
+    border: 2px solid #7AC743;
+    border-radius: 20px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 20px 50px rgba(139, 136, 136, 0.08);
+    box-sizing:border-box;
+}
+
+.result-box{
+    width:340px;
+    text-align: center;
+}
+
+.result-card{
+    background:#dff4e4;
+    border-radius:30px;
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    position:sticky;
+    top:20px;
+}
+
+.result-card h3{
+    color:#1d1d1d;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.result-subtitle{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.result-circle{
+    width:220px;
+    height:220px;
+    border:10px solid #43b05c;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 40px auto;
+    background:#eaf8ee;
+}
+
+.result-circle span{
+    font-size:72px;
+    font-weight:bold;
+    color:#2d8f46;
+}
+
+.result-circle p{
+    margin-top:10px;
+    font-size:15px;
+    color:#444;
+}
+
+.result-ml{
+    margin-bottom:40px;
+}
+
+.result-ml span{
+    font-size:68px;
+    font-weight:bold;
+    color:#2d8f46;
+}
+
+.result-ml p{
+    color:#444;
+    letter-spacing:2px;
+}
+
+.result-badge{
+    background:#eaf8ee;
+    padding:20px;
+    border-radius:20px;
+    color:#2d8f46;
+    font-weight:600;
+    line-height:1.5;
+    box-shadow: 0 2px 8px rgba(45,143,70,0.08);
+
+}
+
+.sidebar h2,
+.content h2,
+.result-box h2{
+    margin-top:0;
+    color:#0B2C5D;
+}
+
+/* VEHICULES */
+
+.vehicules{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.card-radio input{
+    display:none;
+}
+
+.card-radio span{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100px;
+    background:#f4f7fb;
+    border-radius:20px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card-radio input:checked + span{
+    background:#0B2C5D;
+    color:white;
+    border:3px solid #7AC943;
+}
+
+/* MESURES */
+
+.mesures{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.mesures .card-radio{
+    flex:1;
+}
+
+.mesures .card-radio span{
+    min-height:auto;
+    padding:15px;
+    font-size:16px;
+}
+
+/* FORMULAIRE */
+
+label{
+    display:block;
+    margin-bottom:15px;
+    margin-top:12px;
+    font-weight:600;
+    color:#333;
+}
+
+input{
+    width:100%;
+    height:45px;
+    padding:8px 15px;
+    border:2px solid #d6dde5;
+    border-radius:15px;
+    font-size:16px;
+    box-sizing:border-box;
+    background:#ffffff;
+}
+
+input:focus{
+    border:2px solid #7AC943;
+    border-color:#7AC943;
+    outline:none;
+}
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:20px;
+    border:none;
+    border-radius:18px;
+    background:#0B2C5D;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#7AC943;
+}
+
+/* RESULTAT */
+
+#resultat{
+    margin-top:40px;
+    font-size:32px;
+    font-weight:bold;
+    color:#0B2C5D;
+}
+.menu-section{
+    margin-bottom:35px;
+}
+
+.menu-section h3{
+    color:#0B2C5D;
+    font-size:15px;
+    margin-bottom:15px;
+    border-left:4px solid #7AC943;
+    padding-left:10px;
+}
+
+.vehicle-card input{
+    display:none;
+}
+
+.vehicle-card{
+    display:block;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+.vehicle-content{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background:#f4f7fb;
+    padding:3px 20px;
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.vehicle-icon{
+    width: 90px;
+    min-width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.vehicle-icon img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    background: transparent;
+}
+
+.vehicle-content strong{
+    display:block;
+    color:#0B2C5D;
+    margin-bottom:5px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.vehicle-content p{
+    margin:0;
+    font-size:14px;
+    color:#666;
+}
+
+.vehicle-card input:checked + .vehicle-content{
+    background:#0B2C5D;
+}
+
+.vehicle-card input:checked + .vehicle-content strong,
+.vehicle-card input:checked + .vehicle-content p,
+.vehicle-card input:checked + .vehicle-content .vehicle-icon{
+    color:white;
+}
+.illustration img{
+    width:260px;
+    height:auto;
+    display:block;
+    margin-right:20px;
+}
+.vehicle-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.illustration{
+    margin-left:0px;
+    margin-top:-10px;
+}
+
+
+/* ==========================
+   VERSION MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    .main-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar,
+    .content,
+    .result-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .topbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .topbar-center {
+        margin: 15px 0;
+    }
+
+    .vehicle-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .illustration img {
+        width: 180px;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .result-box {
+        position: relative;
+        top: auto;
+    }
+
+}
+@media(max-width:700px){
+    .logo{
+        width:180px;
+        height:auto;
+    }
+}
+  
+.reset-btn{
+    background: #f3f6fb;
+    color: #0B2C5D;
+    border: 2px solid #0B2C5D;
+
+    height: 60px;
+    padding: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+    
+    margin-top: 0;
+
+    position: relative;
+    top: 30px;
+
+}
+.reset-btn:hover{
+    background:#0B2C5D;
+    color: white;
+}
+
+/* Ligne Client + Immatriculation */
+.client-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.client-info div {
+    flex: 1;
+}
+
+/* Ligne dimensions pneu */
+.tyre-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tyre-row div {
+    flex: 1;
+}
+
+/* Ligne boutons */
+.button-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-row button {
+    flex: 1;
+}
+
+.client-row{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.client-field{
+    flex:1;
+}
+
+.client-field label{
+    display:block;
+    margin-bottom:6px;
+}
+
+.button-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    }
+
+.button-grid button{
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer{
+    background:#02152f;
+    color:white;
+    padding:25px 20px;
+    margin-top:50px;
+}
+
+.footer-contenu{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.footer-infos{
+    line-height:1.8;
+}
+
+.menu-footer{
+    display:flex;
+    gap:16px;
+}
+
+.menu-footer a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu-footer a:hover{
+    color:#7AC943;
+}
+
+.footer-copy{
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid rgba(255,255,255,0.15);
+    padding-top:20px;
+}

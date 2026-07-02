@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Demandez gratuitement votre devis pour l'installation ou l'achat du gel anti-crevaison WheelSecure. Réponse rapide en Bretagne pour particuliers et professionnels.">
+<title>Demande de devis WheelSecure | RoulezZen Bretagne</title>
+
+<link rel="stylesheet" href="accueil.css">
+<link rel="stylesheet" href="formulaire.css">
+<script src="script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="RoulezZen" class="logo">
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="produits.html">Produits</a>
+            <a href="calculateur.html">Calculateur</a>
+            <a href="formulaire.html" class="active">Devis</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="calculateur.html" class="btn">
+            Calculer mes besoins
+        </a>
+
+
+    </header>
+
+<div class="formulaire-container">
+ 
+<h1>Demande de devis gratuit</h1>
+
+<form action="https://formsubmit.co/contact.roulezzen@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="Nouvelle demande de devis RoulezZen">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://roulezzen.github.io/index.html">
+
+
+
+<!-- TYPE CLIENT -->
+
+<div class="bloc">
+
+<h2>Type de client</h2>
+
+<input type="radio" id="particulier" name="client" value="Particulier" checked>
+<label for="particulier">Particulier</label>
+
+<input type="radio" id="professionnel" name="client" value="Professionnel">
+<label for="professionnel">Professionnel</label>
+<div id="bloc-societe">
+
+    <h2>Informations société</h2>
+
+    <div class="ligne">
+        <input type="text" name="Nom_société" placeholder="Nom de la société">
+        <input type="text" name="SIRET" placeholder="SIRET">
+    </div>
+
+    <div class="ligne">
+        <input type="text" name="TVA_intracom" placeholder="TVA intracommunautaire">
+    </div>
+
+</div>
+
+</div>
+
+<!-- COORDONNEES -->
+
+<div class="bloc">
+
+<h2>Coordonnées</h2>
+
+<div class="grid-2">
+
+<input type="text" name="Nom" placeholder="Nom" required>
+
+<input type="text" name="Prénom" placeholder="Prénom" required>
+
+</div>
+
+<input type="text" name="Adresse" placeholder="Adresse"required>
+
+<div class="grid-2">
+
+<input type="text" name="Code_postal" placeholder="Code postal">
+
+<input type="text" name="Ville" placeholder="Ville"required>
+
+</div>
+
+<div class="grid-2">
+
+<input type="tel" name="Téléphone" placeholder="Téléphone" required>
+
+<input type="email" name="Email" placeholder="Email"required>
+
+</div>
+
+</div>
+
+
+<!-- VEHICULE 1 -->
+
+<div id="vehicules"></div>
+
+<!-- AJOUT VEHICULE -->
+
+<div class="bloc">
+    <button type="button" id="ajouterVehicule"
+class="btn-ajout">
+    + Ajouter un véhicule
+    </button>
+</div>
+
+<!-- PRODUITS -->
+
+<div class="bloc">
+
+<h2>Produits souhaités</h2>
+
+<label>
+<input type="checkbox" name="bidon_25L" value="Bidon 25 Litres"> 
+Bidon 25 litres
+</label>
+
+<label>
+<input type="checkbox" name="kit_100ml" value="Kit 100 ml">
+Kit 100 ml
+</label>
+
+<label>
+<input type="checkbox" name="kit_250ml" value="Kit 250 ml">
+Kit 250 ml
+</label>
+
+</div>
+
+<!-- COMMENTAIRES -->
+
+<div class="bloc">
+
+<h2>Commentaires</h2>
+
+<textarea name="Commentaires"
+rows="6"
+placeholder="Précisez le nombre de véhicules, les dimensions de pneus ou toute autre demande..."></textarea>
+
+</div>
+
+<!-- RGPD -->
+
+<div class="bloc">
+
+<label>
+
+<input type="checkbox" required>
+
+J'accepte la politique de confidentialité
+
+</label>
+
+</div>
+
+<button type="submit" class="btn-envoyer">
+Demander mon devis gratuit
+</button>
+
+<p style="margin-top:20px;font-size:14px;color:#666;">
+Nous vous répondons généralement sous 24 à 48 heures ouvrées.
+</p>
+
+</form>
+
+</div>
+<footer>
+
+<div class="footer-contenu">
+
+<div class="footer-infos">
+<h3>RoulezZen Bretagne</h3>
+<p>📞 07 81 01 11 55</p>
+<p>✉️ roulezzenbzh@gmail.com</p>
+<p>📍 Intervention sur toute la Bretagne</p>
+</div>
+
+ <div class="menu-footer">
+<a href="index.html">Accueil</a>
+<a href="produits.html">Produits</a>
+<a href="calculateur.html">Calculateur</a>
+<a href="formulaire.html">Devis</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<p class="footer-liens">
+<a href="mentions-legales.html">Mentions légales</a> |
+<a href="confidentialite.html">Politique de confidentialité</a>
+</p>
+
+</div>
+
+<div class="footer-copy">
+© 2026 RoulezZen - Tous droits réservés
+</div>
+
+</footer>
+
+</body>
+</html>
