@@ -8,13 +8,17 @@
 <meta name="description" content="RoulezZen Bretagne propose l'installation et la vente du gel anti-crevaison WheelSecure pour voitures, utilitaires, poids lourds, motos, véhicules agricoles, forestiers et travaux publics.">
 <link rel="stylesheet" href="accueil.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f7fb;
-    color:#333;
+    font-family:'Outfit',sans-serif;
+    background:#111111;
+    color:#fff;
 }
 
 .hero-produit{
@@ -25,7 +29,7 @@ body{
     background-position:center;
     padding:120px 20px;
     text-align:center;
-    color:white;
+    color:#fff;
 }
 
 .hero-produit h1{
@@ -41,16 +45,25 @@ body{
 }
 
 .section{
-    max-width:1200px;
+    background: #111111;
+    color: #fff;
+    width: 100%;
     margin:auto;
-    padding:80px 20px;
+    padding:80px 0;
+    box-sizing: border-box;
+}
+
+.section .conteneur{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 .titre{
     text-align:center;
-    color:#02152f;
+    color:#ffffff !important;
     font-size:3rem;
-    margin-bottom:40px;
+    margin-bottom:20px;
 }
 
 .intro{
@@ -63,9 +76,10 @@ body{
 
 .benefices{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    margin-top:60px;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin:40px auto 0;
+    max-width: 1300px;
 }
 
 .carte{
@@ -81,7 +95,7 @@ body{
 }
 
 .carte h3{
-    color:#02152f;
+    color:white;
     font-size:32px;
 }
 
@@ -132,22 +146,22 @@ body{
     align-items:center;
 }
 
-
 .vehicule h4{
-    color:#02152f;
+    color:white;
 }
 
 .avantages{
-    background:white;
+    background:#111111;
     border-radius:20px;
-    padding:40px;
-    margin-top:50px;
+    padding:50px 60px;
+    margin:40px auto 0;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    max-width: 900px;
+    max-width: 1000px;
     margin:auto;
 }
 
 .avantages li{
+    color: #ffffff;
     margin-bottom:18px;
     font-size:20px;
     line-height: 1.7;
@@ -176,7 +190,7 @@ body{
     padding:18px 35px;
     border-radius:50px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:700;
     font-size:20px;
 }
 
@@ -189,6 +203,7 @@ body{
     font-size:42px;
     font-weight: 700;
    }
+
 *{
     margin:0;
     padding:0;
@@ -196,11 +211,11 @@ body{
 }
 
 body{
-    background:#f5f5f5;
+    background:#111111;
 }
 
 header{
-    background:#02152f;
+    background:#111111;
     color:white;
     padding:20px 50px;
     display:flex;
@@ -213,18 +228,18 @@ header h1{
 }
 
 nav a{
-    color:white;
+    color:#ffffff;
     text-decoration:none;
     margin-left:80px;
-    font-size:18px;
+    font-size:20px;
     font-weight:600;
     padding-bottom:8px;
     transition: all 0.3s ease;
 }
 
 .hero{
-    background:#02152f;
-    color:white;
+    background:#111111;
+    color:#ffffff;
     padding:100px 50px;
 }
 
@@ -239,65 +254,547 @@ nav a{
 }
 
 .btn{
-    background:#7AC943;
-    color:white;
+    background:#7ED957;
+    color:#ffffff;
     text-decoration:none;
     padding:15px 30px;
     border-radius:8px;
-    font-weight:bold;
+    font-weight:700;
 }
 
+/* =================================
+   PRÉSENTATION PRODUIT WHEELSECURE
+================================= */
+
+.produit-premium{
+    background:#111111;
+    padding:90px 50px;
+    color:white;
+}
+
+.premium-contenu{
+    width:100%;
+    max-width:1500px;
+    margin:0 auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:90px;
+}
+
+.premium-image{
+    width:42%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.premium-image img{
+    display:block;
+    width:100%;
+    max-width:500px;
+    height:auto;
+
+    filter:drop-shadow(0 30px 35px rgba(0,0,0,.40));
+
+    transition:transform .35s ease;
+}
+
+.premium-image img:hover{
+    transform:translateY(-8px);
+}
+
+.premium-texte{
+    width:58%;
+    max-width:750px;
+}
+
+.premium-badge{
+    display:inline-block;
+
+    background:rgba(122,201,67,.15);
+    border:1px solid #7AC943;
+
+    color:#7AC943;
+
+    padding:7px 16px;
+    border-radius:5px;
+
+    font-size:15px;
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.premium-texte h2{
+    color:white;
+    font-size:52px;
+    line-height:1.12;
+    margin-bottom:28px;
+}
+
+.premium-texte h2 span{
+    color:#7AC943;
+}
+
+.premium-texte > p{
+    color:#e2e7ec;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:18px;
+    text-align: justify;
+}
+
+.premium-avantages{
+    margin-top:32px;
+    margin-bottom:35px;
+}
+
+.premium-avantage{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    margin-bottom:20px;
+}
+
+.premium-avantage > span{
+    font-size:30px;
+    flex:0 0 40px;
+}
+
+.premium-avantage p{
+    color:white;
+    font-size:19px;
+    line-height:1.5;
+    margin:0;
+}
+
+.premium-btn{
+    display:inline-block;
+
+    background:#7AC943;
+    color:white;
+
+    text-decoration:none;
+    text-transform:uppercase;
+
+    padding:16px 30px;
+    border-radius:7px;
+
+    font-size:16px;
+    font-weight:700;
+
+    transition:transform .3s ease, background .3s ease;
+}
+
+.premium-btn:hover{
+    background:#6bb53a;
+    transform:translateY(-3px);
+}
+
+.fonctionnement{
+    padding:60px 20px 40px;
+    text-align:center;
+    background:#111111;
+}
+
+.fonctionnement h2{
+    font-size:42px;
+    color:white;
+    margin-bottom:50px;
+}
+
+.fonctionnement-visuels{
+    max-width: 2200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(260px, 1fr));
+    gap:30px;
+    align-items:stretch;
+}
+
+.fonctionnement-visuels img{
+    width:100%;
+    height:520px;
+    object-fit:contain;
+    display:block;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.fonctionnement-visuels img:first-child{
+    clip-path: inset(0 0 20% 0);
+    transform: translateY(13px);
+}
+
+
+
+.video-section{
+    max-width:900px;
+    margin:100px auto 60px;
+    text-align:center;
+}
+
+.video-section h2{
+    font-size: 2.9rem;
+    font-weight: 700;
+    color:white;
+    margin-bottom:30px;
+}
+
+.video-section video{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+    .solutions{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+        max-width: 1300px;
+        margin: 60px auto 0;
+    }
+
+    .solutions .carte{
+        width: 100%;
+        height: auto;
+        align-self: start;
+        box-sizing: border-box;
+    }
+
+    .solutions .carte h3{
+        color: #7AC743 !important;
+    }
+
+    .section .intro{
+        color: #ffffff !important;
+    }
+
+    .section .benefices:not(.solutions) .carte h3{
+        color: #7AC743 !important;
+    }
+
+    .section:has(.solutions){
+    padding-bottom: 40px;
+}
+
+    .section .benefices:not(.solutions){
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 40px;
+        max-width: 1100px;
+        margin: 50px auto 0;
+}
+
+    .section .benefices:not(.solutions) .carte{
+        width: 100%;
+    }
+
+.intervention{
+    padding:80px 0;
+    width: 100%;
+    max-width:none;
+    margin:0;
+}
+
+.intervention-contenu{
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.intervention-image img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.intervention-avantages{
+    display:grid;
+    gap:25px;
+}
+
+.intervention-avantages .carte{
+    width:100%;
+}
+
+.intervention{
+    background: #111111;
+    color: #fff;
+    width:100%;
+    margin:0;
+    padding:80px max(20px, calc((100% -1300px)/2));
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+    border-radius: 0;
+}
+
+.intervention-image img{
+    width:100%;
+    height: 500px;
+    object-fit: contain;
+    background: #111111;
+    object-position: left;
+    border-radius:18px;
+    box-shadow:0 10px 25px 
+    rgba(0,0,0,.15);
+}
+
+.badge{
+    display:inline-block;
+    background:#8BC53D;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    margin: 0;
+}
+
+.intervention-content h2{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size:42px;
+    color:#ffffff;
+    margin:0;
+    line-height:1.2;
+    gap: 15px;
+}
+
+.intervention-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#d9d9d9;
+    margin:0;
+}
+
+.intervention-avantages{
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    margin-top:20px;
+}
+
+.icone{
+    flex:1;
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    font-size:52px;
+    color: #7AC943;
+}
+
+.icone span{
+    display:block;
+    margin-top:18px;
+    font-size:16px;
+    color:#333;
+    font-weight:600;
+    line-height:1.4;
+    color: #333;
+}
+
+
+/* CORRECTION SECTION INTERVENTION */
+
+section.intervention{
+    width:100%;
+    max-width:1300px;
+    margin:0 auto;
+    padding:80px 20px;
+
+    display:grid;
+    grid-template-columns:620px 1fr;
+    gap:60px;
+    align-items:start;
+
+    background:#111111;
+    box-sizing:border-box;
+}
+
+section.intervention .intervention-content{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:20px;
+    width:100%;
+}
+
+section.intervention .badge{
+    align-self:flex-start;
+    margin:0;
+}
+
+section.intervention .intervention-content h2{
+    margin:0;
+}
+
+section.intervention .intervention-content p{
+    margin:0;
+}
+
+section.intervention .intervention-avantages{
+    margin:0;
+    width:100%;
+}
+
+section.intervention .btn{
+    align-self:flex-start;
+    margin-top:10px;
+}
+
+.carte p{
+    text-align: justify;
+}
+
+/*AJUSTEMENT DES ESPACES ENTRE LES SECTIONS*/
+ /* 1. REMONTER LES 5 VISUELS VERS "COMMENT CA FONCTIONNE"*/
+ .fonctionnement-visuels h2{
+    margin-bottom: 20px;
+ }
+
+ .fonctionnement-visuels{
+    margin-top: 0;
+ }
+
+ /* 2. REMONTER "DEUX SOLUTIONS...VOTRE BESOIN" VERS LES 5 VISUELS*/
+.fonctionnement{
+    padding-bottom: 20px;
+}
+ .section:has(.solutions){
+    padding-top: 25px;
+}
+
+
+/* 3. REMONTER "LES AVANTAGES ROULEZZEN" VERS LA SECTION INTERVENTION*/
+section.intervention{
+    padding-bottom: 20px;
+}
+section.intervention + section.section{
+    padding-top: 25px;
+}
+
+.fonctionnement-visuels{
+    transform: translateY(-80px);
+}
+
+.fonctionnement{
+    padding-bottom: 0;
+}
+
+/* =====================
+   VERSION MOBILE
+===================== */
 @media (max-width:768px){
 
-header{
+    header{
     flex-direction:column;
     justify-content:center;
     text-align:center;
     padding:20px;
-}
+    }
 
-nav{
+    nav{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:18px;
     margin:20px 0;
-}
+    }
 
-nav a{
+    nav a{
     margin:0;
-}
+    }
 
-.logo{
+    .logo{
     max-width:180px;
-}
+    }
 
-.btn{
+    .btn{
     width:100%;
     max-width:420px;
     text-align:center;
+    }
+
+    .produit-premium{
+        padding:60px 20px;
+    }
+
+    .premium-contenu{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .premium-image,
+    .premium-texte{
+        width:100%;
+    }
+
+    .premium-image img{
+        max-width:320px;
+    }
+
+    .premium-texte{
+        text-align:center;
+    }
+
+    .premium-texte h2{
+        font-size:38px;
+    }
+
+    .premium-texte > p{
+        font-size:17px;
+    }
+
+    .premium-avantage{
+        text-align:left;
+    }
+
+    .fonctionnement-visuels{
+        grid-template-columns:1fr;
+    }
+
+    .fonctionnement-visuels img{
+        height:auto;
+    }
+
+    .intervention-contenu{
+    grid-template-columns: 1fr;
+    }
+
+    .intervention-image{
+    max-width: 320px;
+    margin: auto;
+    }
+
+    .intervention{
+        grid-template-columns:1fr;
+        gap:40px;
+        text-align:center;
+    }
+
+    .intervention-content h2{
+        font-size:32px;
+    }
+
+    .intervention-avantages{
+        flex-direction:column;
+    }
 }
 
-}
 
-.video-section{
-    max-width:900px;
-    margin:60px auto;
-    text-align:center;
-}
-
-.video-section h2{
-    color:#0B2C5D;
-    margin-bottom:25px;
-}
-
-.video-section video{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
 
 </style>
+
 
 </head>
 
@@ -321,7 +818,6 @@ nav a{
 
 </header>
 
-
 <section class="hero-produit">
     <div class="hero-content">
 
@@ -337,11 +833,90 @@ Calculer ma quantité
 </div>
 
 </section>
+<section class="produit-premium">
+
+    <div class="premium-contenu">
+
+        <div class="premium-image">
+            <img src="bidon.png"
+                 alt="Bidon de gel anti-crevaison WheelSecure">
+        </div>
+
+        <div class="premium-texte">
+
+            <span class="premium-badge">WHEELSECURE®</span>
+
+            <h2>
+                Gel anti-crevaison<br>
+                <span>préventif professionnel</span>
+            </h2>
+
+            <p>
+                Le gel WheelSecure est injecté directement à l'intérieur du
+                pneumatique. Sous l'effet de la rotation de la roue, il se
+                répartit uniformément sur la bande de roulement et reste actif
+                en permanence.
+            </p>
+
+            <p>
+                En cas de perforation, le gel colmate le trou afin de limiter
+                les risques d'immobilisation et de vous permettre de poursuivre
+                votre route selon les limites prévues par le fabricant.
+            </p>
+
+            <div class="premium-avantages">
+
+                <div class="premium-avantage">
+                    <span>🛡️</span>
+                    <p>Protège contre les perforations jusqu'à 11 mm.</p>
+                </div>
+
+                <div class="premium-avantage">
+                    <span>🌱</span>
+                    <p>Gel biodégradable et sans danger pour les jantes.</p>
+                </div>
+
+                <div class="premium-avantage">
+                    <span>🔧</span>
+                    <p>Installation professionnelle directement sur site.</p>
+                </div>
+
+            </div>
+
+            <a href="formulaire.html" class="premium-btn">
+                Demander un devis
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="fonctionnement">
+
+    <h2>Comment ça fonctionne ?</h2>
+
+    <div class="fonctionnement-visuels">
+
+        <img src="images/visuel 1.png" alt="Étape 1 du fonctionnement WheelSecure">
+
+        <img src="images/visuel 2.png" alt="Étape 2 du fonctionnement WheelSecure">
+
+        <img src="images/visuel 3.png" alt="Étape 3 du fonctionnement WheelSecure">
+
+        <img src="images/visuel 4.png" alt="Étape 4 du fonctionnement WheelSecure">
+
+        <img src="images/visuel 5.png" alt="Étape 5 du fonctionnement WheelSecure">
+
+    </div>
+
+</section>
 
 <section class="section">
 <h2 class="titre">Deux solutions selon votre besoin</h2>
 
-<div class="benefices">
+<div class="benefices solutions">
 
     <div class="carte">
         <h3>🔧 Installation professionnelle</h3>
@@ -354,12 +929,13 @@ Calculer ma quantité
     </div>
 
     <div class="carte">
-        <h3>🛒 Vente de bidons</h3>
+        <h3>🛒 Vente de bidons et pompes</h3>
 
         <p>
             Vous souhaitez réaliser vous-même l'installation ?
-            RoulezZen propose également la vente de bidons WheelSecure accompagnée de conseils
-            personnalisés pour déterminer la quantité adaptée selon vos pneumatiques grâce à notre calculateur.
+            RoulezZen propose également la vente de bidons WheelSecure, ainsi que des pompes adaptées de 100ml ou 250ml pour faciliter l'installation. 
+            Nous vous accompagnons également avec des conseils personnalisés pour déterminer la quantité adaptée 
+            selon vos pneumatiques grâce à notre calculateur.
         </p>
     </div>
 
@@ -409,7 +985,7 @@ retards et remplacements prématurés.
 
 <section class="video-section">
 
-    <h2>Découvrez WheelSecure en vidéo</h2>
+    <h2>Découvrez le fonctionnement du gel anti-crevaison en vidéo</h2>
 
     <video controls preload="metadata" poster="logo.png">
         <source src="videos/wheelsecure.mp4" type="video/mp4">
@@ -418,33 +994,48 @@ retards et remplacements prématurés.
 
 </section>
 
-<section class="section">
+<section class="intervention">
 
-<h2 class="titre">Pour quels véhicules ?</h2><div class="vehicules"><div class="vehicule">
-<img src="images/Berlines_suv.png" alt="Voitures et SUV">
-<h4>Voitures & SUV</h4>
-</div><div class="vehicule">
-<img src="images/utilitaires.png" alt="Utilitaires">
-<h4>Utilitaires</h4>
-</div><div class="vehicule">
-<img src="images/camion.png" alt="Poids lourds">
-<h4>Poids lourds</h4>
-</div><div class="vehicule">
-<img src="images/moto_route.png" alt="Motos">
-<h4>Motos & Quads</h4>
-</div><div class="vehicule">
-<img src="images/tracteur.png" alt="Agricole">
-<h4>Agricole</h4>
-</div><div class="vehicule">
-<img src="images/pelle_pneus.png" alt="TP">
-<h4>TP & Chantier</h4>
-</div><div class="vehicule">
-<img src="images/forestier.png" alt="Forestier">
-<h4>Forestier</h4>
-</div><div class="vehicule">
-<img src="images/4x4.png" alt="4x4">
-<h4>4x4 & Loisirs</h4>
-</div></div>
+    <div class="intervention-image">
+        <img src="images/intervention.png" alt="Installation WheelSecure RoulezZen">
+    </div>
+
+    <div class="intervention-content">
+
+        <span class="badge">ÉQUIPEMENT PROFESSIONNEL</span>
+
+        <h2>Une intervention rapide,<br>propre et efficace</h2>
+
+        <p>
+            RoulezZen intervient directement sur site avec un matériel
+            professionnel spécialement conçu pour injecter le gel
+            anti-crevaison WheelSecure sur tous types de véhicules.
+        </p>
+
+        <div class="intervention-avantages">
+
+            <div class="icone">
+                ⏱
+                <span>Intervention rapide<br>sur site</span>
+            </div>
+
+            <div class="icone">
+                👍
+                <span>Sans démontage<br>du pneu</span>
+            </div>
+
+            <div class="icone">
+                🛡️
+                <span>Sûr pour le pneu<br>et la jante</span>
+            </div>
+
+        </div>
+
+        <a href="contact.html" class="btn">
+            DEMANDER UN DEVIS GRATUIT
+        </a>
+
+    </div>
 
 </section>
 
@@ -525,7 +1116,6 @@ Demander un devis
 </div>
 
 </footer>
-
 
 </body>
 </html>
