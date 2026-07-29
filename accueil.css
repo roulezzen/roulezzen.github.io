@@ -1058,13 +1058,13 @@ footer{
 
 .titre{
     text-align:center;
-    color:#111111;
+    color:#ffffff;
     font-size:42px;
     margin-bottom:40px;
 }
 
 .section h2{
-    color:#111111;
+    color:#ffffff;
     margin-top:40px;
     margin-bottom:15px;
 }
@@ -1073,7 +1073,7 @@ footer{
 .section li{
     font-size:18px;
     line-height:1.8;
-    color:#444;
+    color:#ffffff;
 }
 
 .section ul{
@@ -1090,6 +1090,30 @@ footer{
     .section p,
     .section li{
         font-size:16px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .footer-contenu{
+        grid-template-columns: 1fr;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:25px;
+    }
+
+    .footer-infos,
+    .menu-footer,
+    .footer-liens{
+        width:100%;
+        text-align:center;
+        justify-self:center;
+    }
+
+    .footer-copy{
+        text-align:center;
     }
 
 }
