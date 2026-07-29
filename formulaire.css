@@ -1,59 +1,85 @@
-body{
-    font-family:'Outfit',sans-serif;
-    background:#111111;
-    margin:0;
-    padding:40px;
+/* =========================================================
+   ROULEZZEN — PAGE DEVIS
+   Styles isolés : l'en-tête et le pied de page restent gérés par accueil.css
+========================================================= */
+
+.page-formulaire {
+    background: #111111;
 }
 
-.formulaire-container{
-    max-width:1000px;
-    margin:auto;
-    background:#ffffff;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.page-formulaire .formulaire-container {
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    color: #111111;
+    background: #ffffff;
+    border: 2px solid #7ac943;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.16);
 }
 
-h1{
-    text-align:center;
-    color:#0d2345;
-    margin-bottom:40px;
+.page-formulaire .formulaire-container h1 {
+    margin-bottom: 40px;
+    color: #0d2345;
+    text-align: center;
 }
 
-h2{
-    color:#0d2345;
-    margin-bottom:20px;
+.page-formulaire .formulaire-container h2 {
+    margin-bottom: 20px;
+    color: #0d2345;
 }
 
-.bloc{
-    margin-bottom:35px;
+.page-formulaire .bloc {
+    margin-bottom: 35px;
 }
 
-.grid-2{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-    margin-bottom:20px;
+.page-formulaire .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-input:not([type="radio"]):not([type="checkbox"]),
-select,
-textarea{
+.page-formulaire .formulaire-container input:not([type="radio"]):not([type="checkbox"]),
+.page-formulaire .formulaire-container select,
+.page-formulaire .formulaire-container textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    color: #111111;
+    background: #ffffff;
+    border: 1px solid #cccccc;
     border-radius: 8px;
-    box-sizing: border-box;
 }
 
-input[type="radio"],
-input[type="checkbox"]{
+.page-formulaire .formulaire-container input::placeholder,
+.page-formulaire .formulaire-container textarea::placeholder {
+    color: #777777;
+    opacity: 1;
+}
+
+.page-formulaire .formulaire-container input:focus,
+.page-formulaire .formulaire-container select:focus,
+.page-formulaire .formulaire-container textarea:focus {
+    border-color: #7ac943;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(122, 201, 67, 0.18);
+}
+
+.page-formulaire .formulaire-container input[type="radio"],
+.page-formulaire .formulaire-container input[type="checkbox"] {
     width: auto;
     margin-right: 8px;
+    accent-color: #7ac943;
     transform: translateY(1px);
 }
 
-.clients label{
+.page-formulaire .formulaire-container label {
+    color: #111111;
+    font-weight: 500;
+}
+
+.page-formulaire .clients label {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -61,118 +87,109 @@ input[type="checkbox"]{
     margin-bottom: 12px;
 }
 
-.produits h2{
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.produits{
-    align-items: center;.
-    flex-wrap: wrap;
-    gap: 35px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
-
-.produits label{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #111111;
-    }
-
-.radio{
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.radio label{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin : 0;
-}
-
-.btn-ajout{
-    background:#0d2345;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-.btn-envoyer{
-    background:#8fd14f;
-    color:white;
-    border:none;
-    padding:18px 35px;
-    border-radius:10px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.btn-envoyer:hover{
-    transform:scale(1.02);
-}
-
-
-#bloc-societe{
+.page-formulaire #bloc-societe {
     display: none;
     margin-top: 30px;
 }
 
-
-.ligne{
+.page-formulaire .ligne {
     display: flex;
     gap: 20px;
     margin-bottom: 15px;
 }
 
-
-.ligne input{
-flex:1;
+.page-formulaire .ligne input {
+    flex: 1;
+    min-width: 0;
 }
 
+.page-formulaire .produits {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px 35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
 
-.titre-valve{
+.page-formulaire .produits h2 {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.page-formulaire .produits label,
+.page-formulaire .radio label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+
+.page-formulaire .radio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px 25px;
+    margin-top: 10px;
+}
+
+.page-formulaire .titre-valve {
     display: block;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-label{
-    color: #111111;
-    font-weight: 500;
+.page-formulaire .btn-ajout,
+.page-formulaire .btn-envoyer {
+    color: #ffffff;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.page-formulaire .btn-ajout {
+    padding: 15px 25px;
+    background: #0d2345;
+    border-radius: 8px;
+}
 
-@media (max-width:768px){
+.page-formulaire .btn-ajout:hover {
+    background: #183b70;
+    transform: translateY(-2px);
+}
 
-    body{
-        padding:20px;
+.page-formulaire .btn-envoyer {
+    padding: 18px 35px;
+    font-size: 18px;
+    background: #7ac943;
+    border-radius: 10px;
+}
+
+.page-formulaire .btn-envoyer:hover {
+    background: #6bb53a;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .page-formulaire .formulaire-container {
+        width: calc(100% - 28px);
+        margin: 30px auto;
+        padding: 25px 18px;
     }
 
-    .formulaire-container{
-        padding:25px;
+    .page-formulaire .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .grid-2,
-    .ligne{
-        display:block;
+    .page-formulaire .ligne {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .ligne input,
-    .grid-2 input{
-        margin-bottom:15px;
+    .page-formulaire .btn-ajout,
+    .page-formulaire .btn-envoyer {
+        width: 100%;
     }
-
-    .btn-ajout,
-    .btn-envoyer{
-        width:100%;
-    }
-
 }

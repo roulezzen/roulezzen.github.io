@@ -1,101 +1,127 @@
+/* =========================================================
+   ROULEZZEN — FORMULAIRE DE DEVIS
+   Version sécurisée et consolidée
+========================================================= */
+
 const particulier = document.getElementById("particulier");
 const professionnel = document.getElementById("professionnel");
 const blocSociete = document.getElementById("bloc-societe");
+const boutonAjout = document.getElementById("ajouterVehicule");
+const conteneurVehicules = document.getElementById("vehicules");
 
-blocSociete.style.display = "none";
+let compteurVehicules = 0;
+const nombreMaximumVehicules = 5;
 
-professionnel.addEventListener("change", () => {
-    blocSociete.style.display = "block";
-});
-
-particulier.addEventListener("change", () => {
-    blocSociete.style.display = "none";
-});
-
-const boutonAjout = document.querySelector(".btn-ajout");
-
-let compteur = 0;
-
-boutonAjout.addEventListener("click", () => {
-    if(compteur>=5){
-        alert("Maximum 5 véhicules par demande.");
+function afficherBlocSociete(doitEtreVisible) {
+    if (!blocSociete) {
         return;
     }
 
-    compteur++;
+    blocSociete.style.display = doitEtreVisible ? "block" : "none";
+}
 
-    const vehicules = document.getElementById("vehicules");
+if (particulier && professionnel && blocSociete) {
+    afficherBlocSociete(professionnel.checked);
 
+    professionnel.addEventListener("change", () => {
+        afficherBlocSociete(true);
+    });
+
+    particulier.addEventListener("change", () => {
+        afficherBlocSociete(false);
+    });
+}
+
+function creerBlocVehicule(numero) {
     const nouveauVehicule = document.createElement("div");
-
-    nouveauVehicule.className = "bloc";
+    nouveauVehicule.className = "bloc bloc-vehicule";
 
     nouveauVehicule.innerHTML = `
-<h2>Véhicule n°${compteur}</h2>
+        <h2>Véhicule n°${numero}</h2>
 
-<div class="grid-2">
+        <div class="grid-2">
+            <select name="type_vehicule${numero}" aria-label="Type du véhicule n°${numero}">
+                <option value="">Type de véhicule</option>
+                <option value="Loisir">Loisir</option>
+                <option value="Voiture">Voiture</option>
+                <option value="Utilitaire">Utilitaire</option>
+                <option value="Poids lourd">Poids lourd</option>
+                <option value="Agricole">Agricole</option>
+                <option value="Travaux publics">Travaux publics</option>
+                <option value="Moto / Quad">Moto / Quad</option>
+                <option value="Forestier">Forestier</option>
+            </select>
 
-<select name="type_vehicule${compteur}">
-    <option>Type de véhicule</option>
-    <option>Loisir</option>
-    <option>Voiture</option>
-    <option>Utilitaire</option>
-    <option>Poids lourd</option>
-    <option>Agricole</option>
-    <option>Travaux publics</option>
-    <option>Moto / Quad</option>
-    <option>Forestier</option>
-</select>
+            <input
+                type="text"
+                name="marque_modele${numero}"
+                placeholder="Marque / Modèle"
+                aria-label="Marque et modèle du véhicule n°${numero}"
+            >
+        </div>
 
-<input type="text"
-name="marque_modele${compteur}" placeholder="Marque / Modèle">
+        <input
+            type="text"
+            name="dimension_pneus${numero}"
+            placeholder="Dimension pneus (ex. : 255/80 R19)"
+            aria-label="Dimensions des pneus du véhicule n°${numero}"
+        >
 
-</div>
+        <span class="titre-valve">Valves électroniques ?</span>
 
-<input type="text"
-name="dimension_pneus${compteur}" placeholder="Dimension pneus (ex : 255/80 R19)">
+        <div class="radio">
+            <label>
+                <input type="radio" name="valve${numero}" value="oui">
+                Oui
+            </label>
 
-<label class="titre-valve">Valves électroniques ?</label>
+            <label>
+                <input type="radio" name="valve${numero}" value="non">
+                Non
+            </label>
+        </div>
 
-<div class="radio">
+        <div class="message-tpms" role="alert" style="display:none;color:red;font-weight:bold;">
+            ⚠️ Les valves électroniques TPMS nécessitent une vérification préalable de compatibilité. Contactez-nous avant toute commande.
+        </div>
+    `;
 
-<label>
-<input type="radio" name="valve${compteur}" value="oui">
-Oui
-</label>
+    const radioOui = nouveauVehicule.querySelector('input[value="oui"]');
+    const radioNon = nouveauVehicule.querySelector('input[value="non"]');
+    const messageTpms = nouveauVehicule.querySelector(".message-tpms");
 
-<label>
-<input type="radio" name="valve${compteur}" value="non">
-Non
-</label>
+    radioOui?.addEventListener("change", () => {
+        if (messageTpms) {
+            messageTpms.style.display = "block";
+        }
+    });
 
-</div>
+    radioNon?.addEventListener("change", () => {
+        if (messageTpms) {
+            messageTpms.style.display = "none";
+        }
+    });
 
-<div class="message-tpms" style="display:none;color:red;font-weight:bold;">
-⚠️ Les valves électroniques TPMS nécessitent une vérification préalable de comptatibilité. Contactez-nous avant toute commande.
-</div>
-`;
+    return nouveauVehicule;
+}
 
+function ajouterVehicule() {
+    if (!conteneurVehicules) {
+        return;
+    }
 
-    vehicules.appendChild(nouveauVehicule);
-const radioOui = nouveauVehicule.querySelector('input[value="oui"]');
-const radioNon = nouveauVehicule.querySelector('input[value="non"]');
+    if (compteurVehicules >= nombreMaximumVehicules) {
+        window.alert("Maximum 5 véhicules par demande.");
+        return;
+    }
 
-radioOui.addEventListener("change", () => {
+    compteurVehicules += 1;
+    conteneurVehicules.appendChild(creerBlocVehicule(compteurVehicules));
+}
 
-    const message = nouveauVehicule.querySelector(".message-tpms");
+if (boutonAjout && conteneurVehicules) {
+    boutonAjout.addEventListener("click", ajouterVehicule);
 
-    message.style.display = "block";
-
-   
-});
-
-radioNon.addEventListener("change", () => {
-
-    const message = nouveauVehicule.querySelector(".message-tpms");
-
-    message.style.display = "none";
-
-});
-});
-document.querySelector(".btn-ajout").click();
+    /* Un premier véhicule est affiché automatiquement à l'ouverture du devis. */
+    ajouterVehicule();
+}
