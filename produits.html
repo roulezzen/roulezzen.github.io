@@ -760,7 +760,9 @@ section.intervention + section.section{
     }
 
     .fonctionnement-visuels{
+        transform: none;
         grid-template-columns:1fr;
+        gap:20px;
     }
 
     .fonctionnement-visuels img{
@@ -789,10 +791,32 @@ section.intervention + section.section{
     .intervention-avantages{
         flex-direction:column;
     }
+
+
+.section .benefices,
+.section .benefices:not(.solutions),
+.solutions{
+    grid-template-columns: 1fr;
 }
 
+section.intervention{
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+}
 
+.intervention-image img{
+    height: auto;
+}
 
+.avantages{
+    padding: 30px 20px;
+}
+
+.video-section{
+    padding: 0 20px;
+}
+
+}
 </style>
 
 
