@@ -1051,6 +1051,7 @@ footer{
 /* ===== Pages Mentions légales / Confidentialité ===== */
 
 .section{
+    color: #ffffff;
     max-width:1100px;
     margin:70px auto;
     padding:0 20px;
@@ -1069,7 +1070,13 @@ footer{
     margin-bottom:15px;
 }
 
-.section p,
+.section p{
+    font-size:18px;
+    line-height:1.8;
+    color:#ffffff;
+}
+
+
 .section li{
     font-size:18px;
     line-height:1.8;

@@ -2,7 +2,7 @@ body{
     margin:0;
     padding:0;
     font-family:'Outfit',sans-serif;
-    background:#f3f6fb;
+    background:#111111;
 }
 
 .hero-calculateur{
@@ -41,6 +41,7 @@ body{
 }
 
 .intro{
+    color: #ffffff;
     text-align:center;
     max-width:900px;
     margin:0 auto;
@@ -68,6 +69,7 @@ body{
 }
 
 .carte p{
+    color: #555;
     line-height:1.7;
 }
 
@@ -135,6 +137,7 @@ body{
     gap:40px;
     align-items:start;
     }
+
 
 /* BLOCS */
 
@@ -355,7 +358,7 @@ button:hover{
 }
 
 .menu-section h3{
-    color:#0B2C5D;
+    color:#ffffff;
     font-size:15px;
     margin-bottom:15px;
     border-left:4px solid #7AC943;
