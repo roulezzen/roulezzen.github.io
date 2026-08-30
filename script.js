@@ -1,7 +1,21 @@
-/* =========================================================
-   ROULEZZEN — FORMULAIRE DE DEVIS
-   Version sécurisée et consolidée
-========================================================= */
+/*--
+==========================================================================
+=================================
+ROULEZZEN BRETAGNE
+
+Conception graphique et développement :
+Stéphanie Paris
+
+Première version : 2026
+
+© 2026 Stéphanie Paris
+
+Création originale.
+Tous droits réservés.
+==========================================================================
+=================================
+*/
+
 
 const particulier = document.getElementById("particulier");
 const professionnel = document.getElementById("professionnel");

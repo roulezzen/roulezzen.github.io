@@ -1,3 +1,23 @@
+/*--
+==========================================================================
+=================================
+ROULEZZEN BRETAGNE
+
+Conception graphique et développement :
+Stéphanie Paris
+
+Première version : 2026
+
+© 2026 Stéphanie Paris
+
+Création originale.
+Tous droits réservés.
+==========================================================================
+=================================
+*/
+
+
+
 const CLE_PANIER = "roulezzen_panier";
 
 function lirePanier() {
